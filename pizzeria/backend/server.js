@@ -29,6 +29,7 @@ app.use('/api/dashboard',require( './routes/dashboard' ));
 app.use("/api/admin", require("./routes/dashboard"));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/api/ai", aiRoutes);
+app.use("/api/notifications",require("./routes/notification"));
 
 const PORT = process.env.PORT || 5000;
 // app.listen(PORT, () => console.log(`Pizzeria Core Server operating on port ${PORT}`));
